@@ -1,0 +1,555 @@
+
+
+<PropertyList>
+
+ 
+   <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>50</max-m>
+    </animation>
+  
+
+
+<!-- ******************** instruments *******************-->
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/stick.xml</path>
+  <!--offsets>
+   <x-m>-6.75</x-m>
+   <y-m> 0.092</y-m>
+   <z-m>0.464</z-m>
+  </offsets-->
+ </model>
+
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/AI/AI.xml</path>
+  <offsets>
+   <x-m>-6.75</x-m>
+   <y-m> 0.092</y-m>
+   <z-m>0.464</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.4</x-offset>
+    <y-offset>1.2</y-offset>
+    <z-offset>1.25</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/RDMI/RDMI.xml</path>
+  <offsets>
+   <x-m>-6.758</x-m>
+   <y-m> 0.094</y-m>
+   <z-m>0.36</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.89</y-offset>
+    <z-offset>0.89</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/n2/n2.xml</path>
+  <offsets>
+   <x-m>-6.753</x-m>
+   <y-m> 0.174</y-m>
+   <z-m>0.456</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.84</y-offset>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/FuelFlow/ff.xml</path>
+  <offsets>
+   <x-m>-6.751</x-m>
+   <y-m>0.23</y-m>
+   <z-m>0.325</z-m>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.84</y-offset>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/EGT/EGT.xml</path>
+  <offsets>
+     <x-m>-6.765</x-m>
+   <y-m> 0.174</y-m>
+   <z-m>0.388</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.84</y-offset>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/Nozzle/nozzle-1.xml</path>
+  <offsets>
+    <x-m>-6.765</x-m>
+   <y-m> 0.174</y-m>
+  <z-m>0.325</z-m>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.84</y-offset>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/can-warn/can-warn.xml</path>
+  <offsets>
+     <x-m>-6.773</x-m>
+    <y-m>0.23</y-m>
+   <z-m>0.458</z-m>
+  </offsets>
+    <overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.84</y-offset>
+    <z-offset>0.87</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+  <model>
+  <path>Aircraft/TF-104G/Models/panel/fire-warn/fire-warn1.xml</path>
+  <offsets>
+     <x-m>-6.772</x-m>
+    <y-m>0.23</y-m>
+   <z-m>0.437</z-m>
+  </offsets>
+    <overlay>
+		 <animation n="102">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.9</y-offset>
+    <z-offset>0.9</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+  <model>
+  <path>Aircraft/TF-104G/Models/panel/fire-warn/fire-warn1.xml</path>
+  <offsets>
+     <x-m>-6.772</x-m>
+    <y-m>-0.18</y-m>
+   <z-m>0.473</z-m>
+  </offsets>
+    <overlay>
+		 <animation n="103">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.9</y-offset>
+    <z-offset>0.9</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+  <model>
+  <path>Aircraft/TF-104G/Models/panel/fire-warn/fire-warn1.xml</path>
+  <offsets>
+     <x-m>-6.772</x-m>
+    <y-m>-0.18</y-m>
+   <z-m>0.473</z-m>
+  </offsets>
+    <overlay>
+		 <animation n="104">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.9</y-offset>
+    <z-offset>0.9</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/cit-warn/cit-warn.xml</path>
+  <offsets>
+     <x-m>-6.75</x-m>
+    <y-m>-0.072</y-m>
+   <z-m>0.516</z-m>
+  </offsets>
+    <overlay>
+		 <animation n="105">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.9</y-offset>
+    <z-offset>0.9</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+ 
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/oilpressure/oilpressureL.xml</path>
+  <offsets>
+     <x-m>-6.75</x-m>
+    <y-m>0.23</y-m>
+   <z-m>0.389</z-m>
+  </offsets>
+    <overlay>
+		 <animation n="106">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.84</y-offset>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+  <model>
+  <path>Aircraft/TF-104G/Models/panel/oiltemp/oiltempL.xml</path>
+  <offsets>
+     <x-m>-6.752</x-m>
+    <y-m>0.292</y-m>
+   <z-m>0.405</z-m>
+  </offsets>
+    <overlay>
+		 <animation n="107">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.91</y-offset>
+    <z-offset>0.91</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+ <name>ASi2</name>
+   <path>Aircraft/TF-104G/Models/panel/ASIMach/asi2.xml</path>
+  <offsets>
+   <x-m>-6.7525</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>0.45</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="108">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.16</y-offset>
+    <z-offset>1.2</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/Alt/version2/altimeter.xml</path>
+  <offsets>
+   <x-m>-6.758</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>0.357</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="109">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.26</y-offset>
+    <z-offset>1.26</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/vsi/vsi.xml</path>
+  <offsets>
+   <x-m>-6.74</x-m>
+   <y-m> 0.016</y-m>
+   <z-m>0.49</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="110">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.78</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/AoA/aoa-gauge.xml</path>
+  <offsets>
+   <x-m>-6.74</x-m>
+   <y-m> -0.042</y-m>
+   <z-m>0.479</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="111">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.2</y-offset>
+    <z-offset>1.2</z-offset>
+   </animation>
+  </overlay>
+ </model>
+ 
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/HSI/hsi.xml</path>
+  <offsets>
+   <x-m>-6.752</x-m>
+   <y-m> -0.01</y-m>
+   <z-m>0.383</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="112">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.3</y-offset>
+    <z-offset>1.4</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ 
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Flaps/flaps.xml</path>
+  <offsets>
+  <x-m>-6.761</x-m>
+   <y-m>-0.315</y-m>
+   <z-m>0.395</z-m>
+  </offsets>
+  <overlay>
+		 <animation n="112">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.7</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/Gear/gear.xml</path>
+  <offsets>
+   <x-m>-6.743</x-m>
+   <y-m>-0.257</y-m>
+   <z-m>0.223</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="113">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.2</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ 
+<!--
+ <model>
+  <path>Aircraft/DavePack/Instruments/PanelLights/lights.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>-0.21</y-m>
+   <z-m>0.477</z-m>
+  </offsets>
+ </model>
+-->
+
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Fuel/fuel-total-14.xml</path>
+  <offsets>
+   <x-m>-6.723</x-m>
+   <y-m>0.345</y-m>
+   <z-m>0.088</z-m>
+   <pitch-deg>-10</pitch-deg>
+   <heading-deg>-10</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Fuel/fuel-dump-switch.xml</path>
+  <offsets>
+   <x-m>-6.697</x-m>
+   <y-m>0.351</y-m>
+   <z-m>0.03</z-m>
+   <pitch-deg>-10</pitch-deg>
+   <heading-deg>-10</heading-deg>
+  </offsets>
+   <overlay>
+		 <animation n="114">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.2</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1.5</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ 
+<!--
+ 
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/GMeter/gmeter.xml</path>
+  <offsets>
+   <x-m>-6.64</x-m>
+   <y-m>-0.16</y-m>
+   <z-m>0.51</z-m>
+  </offsets>
+ </model>
+-->
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/radar/radar.xml</path>
+  <offsets>
+   <x-m>-6.735</x-m>
+   <y-m> -0.01</y-m>
+   <z-m> 0.17</z-m>
+   <pitch-deg>-35.0</pitch-deg>
+  </offsets>
+   <overlay>
+		 <animation n="115">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.2</x-offset>
+    <y-offset>1.2</y-offset>
+    <z-offset>1.2</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/radar2/radar-screen.xml</path>
+  <offsets>
+   <x-m>-6.693</x-m>
+   <y-m> -0.01</y-m>
+   <z-m> 0.185</z-m>
+   <pitch-deg>-32.0</pitch-deg>
+  </offsets>
+   <overlay>
+		 <animation n="116">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+ 
+ 
+
+
+
+<model>
+  <path>Aircraft/TF-104G/Models/panel/chronograph/chronograph.xml</path>
+ 
+   <offsets>
+   <x-m>-6.731</x-m>
+   <y-m>-0.20</y-m>
+   <z-m>0.422</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="117">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.2</x-offset>
+    <y-offset>0.9</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+
+  </overlay>
+ </model>
+ 
+ <model>
+  <path>Aircraft/TF-104G/Models/panel/Turn/Turn.xml</path>
+ 
+   <offsets>
+   <x-m>-6.747</x-m>
+   <y-m>-0.267</y-m>
+   <z-m>0.403</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="117">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.2</x-offset>
+    <y-offset>0.5</y-offset>
+    <z-offset>0.5</z-offset>
+   </animation>
+  </overlay>
+ </model>
+
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/MagCompass/comp.xml</path>
+ 
+   <offsets>
+   <x-m>-6.75</x-m>
+   <y-m>-0.194</y-m>
+   <z-m>0.325</z-m>
+  </offsets>
+   <overlay>
+		 <animation n="118">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.2</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>
+
+ </model>
+
+ 
+ 
+</PropertyList>
+ 

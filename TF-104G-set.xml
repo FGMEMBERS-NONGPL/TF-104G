@@ -13,8 +13,9 @@ see attached file describing license.
  <sim>
 
   <description>Lockheed TF-104G Star Fighter</description>
-  <author>David Culp, Massimo Taccoli</author>
-  <status>beta</status>
+  <author>David Culp, Massimo Taccoli, StuartC</author>
+  <status>beta 0.6</status>
+   <aircraft-version>v0.6</aircraft-version>
   <flight-model>jsb</flight-model>
   <aero>TF-104G-jsbsim</aero>
   
@@ -23,9 +24,19 @@ see attached file describing license.
   </startup>
 
   <sound>
-    <path>Aircraft/TF-104G/Sounds/F-104-sound.xml</path>
+    <path>Aircraft/TF-104G/Sounds/sound.xml</path>
   </sound>
 
+   <systems>
+     <autopilot>
+         <path>Aircraft/TF-104G/Systems/autopilot5.xml</path>
+      </autopilot>
+<electrical>
+  <path>Aircraft/Generic/generic-electrical.xml</path>
+</electrical>	 
+   </systems>
+  
+  
   <submodels> 
     <serviceable type="bool">true</serviceable>
     <path>Aircraft/TF-104G/TF-104G-submodels.xml</path>
@@ -40,14 +51,47 @@ see attached file describing license.
 
  <number-views type="int">6</number-views>
   <view n="0">
+ 
    <internal archive="y">true</internal>
    <config>
     <pitch-offset-deg>-6.0</pitch-offset-deg>
     <x-offset-m archive="y">0.0</x-offset-m><!-- right/left -->
-    <y-offset-m archive="y">0.75</y-offset-m><!-- up/down -->
-    <z-offset-m archive="y">-5.88</z-offset-m><!-- aft/fore -->
+    <y-offset-m archive="y">0.7</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-6.3</z-offset-m><!-- aft/fore -->
+	<default-field-of-view-deg>66.3</default-field-of-view-deg>
    </config>
   </view>
+  
+  <view n="100">
+	<name>Back seat</name>
+	<internal archive="y">true</internal>
+	<type>lookfrom</type>
+	<config>
+		<from-model type="bool">true</from-model>
+		<from-model-idx type="int">0</from-model-idx>
+		 <x-offset-m archive="y">0.0</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.93</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-4.5</z-offset-m><!-- aft/fore -->
+		<!-- <pitch-offset-deg>-10</pitch-offset-deg> -->
+		<default-field-of-view-deg>76.3</default-field-of-view-deg>
+	</config>
+
+</view>
+  
+  <view n="101">
+	   <name>Pilot cam</name>
+        <internal archive="y">false</internal>
+        <config>
+		 <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <x-offset-m archive="y">0.0</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.85</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-6.8</z-offset-m><!-- aft/fore -->
+          <pitch-offset-deg>0</pitch-offset-deg>
+		  <heading-offset-deg>180</heading-offset-deg>
+          <default-field-of-view-deg>65</default-field-of-view-deg>
+        </config>
+      </view>
 
   <model>
    <path>Aircraft/TF-104G/Models/TF-104G.xml</path>
@@ -60,6 +104,40 @@ see attached file describing license.
    <setting>0.50</setting> 
    <setting>1.00</setting> 
   </flaps>
+
+  <hud>
+<path n="1">Aircraft/TF-104G/Hud/hud.xml</path>
+<visibility n="1">true</visibility>
+   <palette>
+    <color n="0">
+     <alpha type="float">0.85</alpha>
+     <antialiased type="bool">true</antialiased>
+     <brightness type="float">0.85</brightness>
+     <transparent type="bool">true</transparent>
+     <red type="float">0.38</red>
+     <green type="float">1.0</green>
+     <blue type="float">0.22</blue>
+    </color>
+    <color n="1">
+     <alpha type="float">0.85</alpha>
+     <antialiased type="bool">true</antialiased>
+     <brightness type="float">0.85</brightness>
+     <transparent type="bool">true</transparent>
+     <red type="float">1.0</red>
+     <green type="float">0.2</green>
+     <blue type="float">0.0</blue>
+    </color>
+   </palette>
+<clipping>
+            <left type="double">-60</left>
+            <right type="double">60</right>
+            <top type="double">40</top>
+            <bottom type="double">-100</bottom>
+         </clipping>
+
+</hud>
+
+  
 
   <help>
    <key>
@@ -88,25 +166,46 @@ see attached file describing license.
       </parameters> 
     </redout>
   </rendering>
+  
+  <mp-systems>
+<radar-enabled type="bool">true</radar-enabled>
+<ecm-rwr-enabled type="bool">true</ecm-rwr-enabled>
+<combat-enabled type="bool">true</combat-enabled>
+</mp-systems>	
+	
 
   <multiplay>
-    <generic>
-     <int n="0" type="int">0</int>
-     <int n="1" type="int">0</int>
-     <int n="2" type="int">0</int>
-     <int n="3" type="int">0</int>
-     <int n="4" type="int">0</int>
-     <int n="5" type="int">0</int>
-     <int n="6" type="int">0</int>
-     <int n="7" type="int">0</int>
-     <int n="8" type="int">0</int>
-     <int n="9" type="int">0</int>
-     <int n="10" type="int">0</int>
-     <int n="11" type="int">0</int>
-     <int n="12" type="int">0</int>
-    </generic>
+     <generic n="0">
+	
+	
+      <!-- Nav lights on -->
+      <int n="0" alias="/controls/lighting/nav-lights-switch" />
+      <!-- Beacon on -->
+      <int n="1" alias="/controls/lighting/beacon-switch" />
+      
+      <!-- int[2] reserved for radar -->
+      <int n="2" type="int">1</int>    <!-- force radar standby transmission over MP -->
+      <!-- Landing lights on -->
+      <int n="3" alias="/controls/lighting/landing-lights-switch" />
+	  
+	    <int n="5" alias="/engines/engine[0]/state" />
+	 
+	  <int n="7" alias="/sim/crashed" />
+      
+       
+	<int n="9" type="int">  0 </int>  <!-- RESERVED FOR DUAL CONTROL (Boolean Light Switch)-->
+       
+	 <float n="8" alias="/engines/engine[0]/augmentation" /> <!-- Reheat Left Engine -->
+	 
+	<float n="15" alias="/velocities/mach" /> <!-- Mach for Multiplayer Sound -->
+	 <float n="16" alias="/engines/engine[0]/thrust-lbs" /> <!-- Thrust for Multiplayer Sound -->
+	
+	
+      <string n="0" type="string"></string>    <!-- bs_TDM1_mpp -->
+				<string n="1" type="string"></string>    <!-- pilot's instruments -->
+      </generic>
   </multiplay>
-
+<menubar include="Dialogs/menu.xml"/>
  </sim>
 
  <controls>
@@ -141,8 +240,17 @@ see attached file describing license.
    <tank n="0"> <!-- Internal Fuel, capacity 735 gal --> 
      <level-gal_us archive="y">735</level-gal_us>
    </tank>
-   <tank n="1"> <!-- External Fuel, capacity 691 gal --> 
-     <level-gal_us archive="y">691</level-gal_us>
+   <tank n="1"> <!-- External Fuel, capacity 171 gal --> 
+     <level-gal_us archive="y">171</level-gal_us>
+   </tank>
+   <tank n="2"> <!-- External Fuel, capacity 171 gal --> 
+     <level-gal_us archive="y">171</level-gal_us>
+   </tank>
+   <tank n="3"> <!-- External Fuel, capacity 171 gal --> 
+     <level-gal_us archive="y">171</level-gal_us>
+   </tank>
+   <tank n="4"> <!-- External Fuel, capacity 171 gal --> 
+     <level-gal_us archive="y">171</level-gal_us>
    </tank>
   </fuel>
  </consumables>
@@ -250,6 +358,59 @@ see attached file describing license.
      </mod-up>
     </key>
 
+    <key n="99">
+     <name>c</name>
+     <desc>toggle canopy</desc>
+     <binding>
+       <command>property-toggle</command>
+       <property>fdm/jsbsim/systems/canopy/command</property>
+     </binding>
+    </key>
+
+  <key n="72">
+    <name>H</name>
+    <desc>Active Target Seeking</desc>
+    <binding>
+       <command>nasal</command>
+       <script>hud.activate_borsight()</script>
+    </binding>
+  </key>
+  
+  <key n="84">
+    <name>t</name>
+    <desc>Active ECM</desc>
+    <binding>
+       <command>nasal</command>
+       <script>hud.activate_ECM()</script>
+    </binding>
+  </key>
+  
+  <key n="82">
+    <name>R</name>
+    <desc>Active Telemeter</desc>
+    <binding>
+       <command>nasal</command>
+       <script>hud.activate_Telemeter()</script>
+    </binding>
+  </key>
+  
+  <key n="116">
+    <name>t</name>
+    <desc>Ajusting Radar Distance</desc>
+    <binding>
+       <command>nasal</command>
+       <script>hud.switch_distance()</script>
+    </binding>
+  </key>
+  
+   <key n="81">
+    <name>q</name>
+    <desc>Toggle radar standby mode</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/radar/display-rdr</property>
+    </binding>
+  </key>
 
  </keyboard>
 </input>
@@ -275,7 +436,74 @@ see attached file describing license.
     <selected type="int">2</selected>
   </radar>
   <rdmi-mode type="int">0</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
+  
+   <radar2>
+      <sweep-width-m type="double">0.0844</sweep-width-m>
+      <range-width-m type="double">0.0846</range-width-m>
+      <radius-ppi-display-m type="double">0.0846</radius-ppi-display-m>
+      <hud-eye-dist-m type="double">0.766</hud-eye-dist-m>
+      <hud-radius-m type="double">0.071</hud-radius-m>
+      <hud-vertical-offset-m type="double">-0.025</hud-vertical-offset-m>
+    </radar2>
+	
+	 <radar>
+      <range type="int" archive="y">20</range>
+      <range-factor type="double" archive="n">0.001888</range-factor>
+      <minimized type="bool" archive="y">false</minimized>
+      <selected type="int">3</selected>
+      <!-- inicio en pruebas -->
+      <enabled type="bool">true</enabled>
+      <az-field type="double">140</az-field>
+      <range type="double">80</range>
+      <range-selected type="double">20</range-selected>
+      <radar2-range type="double">80</radar2-range>
+      <display-rdr type="bool">true</display-rdr>
+      <radar-standby type="int">0</radar-standby>
+      <mode>
+        <rws type="bool">true</rws>
+        <tws-auto type="bool">false</tws-auto>
+      </mode>
+    </radar>
+	
+	<rwr>
+      <display-lighting-intens type="double">0.4</display-lighting-intens>
+      <symbology-lighting-intens type="double">1</symbology-lighting-intens>
+    </rwr>
 </instrumentation>
+
+<nasal>
+    <TF-104>
+     
+	  <file>Aircraft/TF-104G/Nasal/liveries.nas</file>
+    </TF-104>
+	<low>
+      <file>Aircraft/TF-104G/Nasal/low.nas</file>
+    </low>
+	
+	<radardist>
+<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+</radardist>
+
+<rwr>
+ <file>Aircraft/TF-104G/Nasal/rwr.nas</file>
+</rwr> 
+
+<radar2>
+	<file>Aircraft/TF-104G/Nasal/radar2.nas</file> 
+</radar2>	
+
+<radar>
+<file>Aircraft/TF-104G/Nasal/radar.nas</file> 
+    </radar> 
+	
+	<eno>
+		     <file>Aircraft/TF-104G/Nasal/eno.nas</file>
+		</eno>
+		
+		<lights>
+      <file>Aircraft/TF-104G/Nasal/Lights.nas</file>
+    </lights>	
+  </nasal>
 
 </PropertyList>
 
