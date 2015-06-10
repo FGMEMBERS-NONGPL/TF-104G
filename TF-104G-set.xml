@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Lockheed TF-104G config file
+David Culp,  davidculp@cox.net
+License:  Creative Commons, CC-BY-NC-SA
+see attached file describing license.
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Lockheed TF-104G Star Fighter</description>
+  <author>David Culp, Massimo Taccoli</author>
+  <status>beta</status>
+  <flight-model>jsb</flight-model>
+  <aero>TF-104G-jsbsim</aero>
+  
+  <startup>
+   <splash-texture>Aircraft/TF-104G/TF-104G-splash.png</splash-texture> 
+  </startup>
+
+  <sound>
+    <path>Aircraft/TF-104G/Sounds/F-104-sound.xml</path>
+  </sound>
+
+  <submodels> 
+    <serviceable type="bool">true</serviceable>
+    <path>Aircraft/TF-104G/TF-104G-submodels.xml</path>
+  </submodels>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+
+  <panel>
+    <visibility archive="y">false</visibility>
+  </panel>
+
+ <number-views type="int">6</number-views>
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <pitch-offset-deg>-6.0</pitch-offset-deg>
+    <x-offset-m archive="y">0.0</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.75</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-5.88</z-offset-m><!-- aft/fore -->
+   </config>
+  </view>
+
+  <model>
+   <path>Aircraft/TF-104G/Models/TF-104G.xml</path>
+  </model>
+
+  <chase-distance-m>-22</chase-distance-m>
+
+  <flaps>
+   <setting>0.00</setting>
+   <setting>0.50</setting> 
+   <setting>1.00</setting> 
+  </flaps>
+
+  <help>
+   <key>
+    <name>Shift-Q</name>
+    <desc>fuel cutoff switch or lever</desc>
+   </key>
+   <line> </line>
+   <line>Takeoff: full flaps, rotate at 160 kts.</line>
+   <line>Climb  : 400 kts. / 0.85 mach</line>
+   <line>Cruise : 0.92 mach</line> 
+   <line>Landing: full flaps, land at 180 kts. + 10 kts. per 5000 lbs fuel.</line>
+   <line> </line>
+   <line>Half flaps limit: 375 knots. </line>
+   <line>Gear and full Flap limit: 275 knots.</line>
+   <line> </line>
+   <line>Clickable panel.  Hit Ctrl-C to see hot spots.</line>
+   <text>
+   </text>
+  </help>
+
+  <rendering>
+    <redout>
+      <parameters>
+        <blackout-onset-g>4.0</blackout-onset-g>
+        <blackout-complete-g>8.0</blackout-complete-g>
+      </parameters> 
+    </redout>
+  </rendering>
+
+  <multiplay>
+    <generic>
+     <int n="0" type="int">0</int>
+     <int n="1" type="int">0</int>
+     <int n="2" type="int">0</int>
+     <int n="3" type="int">0</int>
+     <int n="4" type="int">0</int>
+     <int n="5" type="int">0</int>
+     <int n="6" type="int">0</int>
+     <int n="7" type="int">0</int>
+     <int n="8" type="int">0</int>
+     <int n="9" type="int">0</int>
+     <int n="10" type="int">0</int>
+     <int n="11" type="int">0</int>
+     <int n="12" type="int">0</int>
+    </generic>
+  </multiplay>
+
+ </sim>
+
+ <controls>
+  <flight>
+   <flaps>0.0</flaps>
+   <elevator-trim>-0.2</elevator-trim>
+  </flight>
+  <lighting>
+   <instruments-norm>0.3</instruments-norm>
+  </lighting>
+  <armament>
+   <gunsight>
+    <power-on type="bool">true</power-on>
+    <intensity type="double">0.3</intensity>
+   </gunsight>
+   <master-arm type="bool">false</master-arm>
+   <release type="bool">false</release>
+  </armament>
+  <gear>
+    <brake-parking type="double">1.0</brake-parking>
+  </gear>
+ </controls>
+
+ <engines>
+  <engine n="0">
+    <running>true</running>
+  </engine>
+ </engines>
+
+ <consumables>
+  <fuel>
+   <tank n="0"> <!-- Internal Fuel, capacity 735 gal --> 
+     <level-gal_us archive="y">735</level-gal_us>
+   </tank>
+   <tank n="1"> <!-- External Fuel, capacity 691 gal --> 
+     <level-gal_us archive="y">691</level-gal_us>
+   </tank>
+  </fuel>
+ </consumables>
+
+<input>
+ <keyboard>
+
+ <key n="81">
+  <name>Shift-Q</name>
+  <desc>Fuel Cutoff Switch or Lever.</desc>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[0]</property>
+   </condition>
+   <command>property-toggle</command>
+   <property>/controls/engines/engine[0]/cutoff</property>
+  </binding>
+ </key>
+
+    <key n="101">
+     <name>e</name>
+     <desc>Release selected store(s)</desc>
+      <binding>
+       <command>property-assign</command>
+       <property>fdm/jsbsim/systems/armament/release</property>
+       <value>1</value>
+      </binding>
+     <mod-up>
+       <binding>
+        <command>property-assign</command>
+        <property>fdm/jsbsim/systems/armament/release</property>
+        <value>0</value> 
+       </binding>
+     </mod-up>
+    </key>
+
+   <key n="100">
+     <name>d</name>
+     <desc>Deploy braking chute</desc>
+     <binding>
+      <condition>
+       <equals>
+         <property>controls/flight/chute_jettisoned</property>
+         <value>0</value>
+       </equals>
+      </condition>
+      <command>property-assign</command>
+      <property>fdm/jsbsim/systems/chute/deploy</property>
+      <value type="int">1</value>
+     </binding>
+    </key>
+
+    <key n="106">
+      <name>j</name>
+      <desc>jettison braking chute</desc>
+      <binding>
+       <command>property-assign</command>
+       <property>fdm/jsbsim/systems/chute/deploy</property>
+       <value type="int">0</value>
+      </binding>
+      <binding>
+       <command>property-assign</command>
+       <property>controls/flight/chute_jettisoned</property>
+       <value type="int">1</value>
+      </binding>
+    </key>
+
+    <key n="109">
+     <name>m</name>
+     <desc>engage nose wheel steering</desc>
+     <binding>
+      <command>property-assign</command>
+      <property>fdm/jsbsim/systems/NWS/engaged</property>
+      <value>1</value> 
+     </binding>
+     <mod-up>
+       <binding>
+        <command>property-assign</command>
+        <property>fdm/jsbsim/systems/NWS/engaged</property>
+        <value>0</value> 
+       </binding>
+     </mod-up>
+    </key>
+
+    <key n="110">
+      <name>n</name>
+      <desc>Toggle tailhook.</desc>
+      <binding>
+       <command>property-toggle</command>
+       <property>fdm/jsbsim/systems/hook/tailhook-cmd-norm</property>
+      </binding>
+    </key>
+
+    <key n="115">
+     <name>s</name>
+     <desc>Toggle starter valve.</desc>
+     <binding>
+       <command>property-toggle</command>
+       <property>controls/engines/engine[0]/starter</property>
+     </binding>
+     <mod-up>
+       <binding>
+         <command>null</command>
+       </binding>
+     </mod-up>
+    </key>
+
+
+ </keyboard>
+</input>
+
+ <fdm>
+  <jsbsim>
+   <systems>
+    <dump>
+      <armed type="double">0</armed>
+    </dump>
+   </systems> 
+  </jsbsim>
+ </fdm>
+
+<instrumentation>
+  <marker-beacon>
+    <volume type="double" archive="y">0.0</volume>
+  </marker-beacon>
+  <radar>
+    <range type="int" archive="y">120</range>
+    <range-factor type="double" archive="n">0.000444</range-factor>
+    <minimized type="bool" archive="y">false</minimized>
+    <selected type="int">2</selected>
+  </radar>
+  <rdmi-mode type="int">0</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
+</instrumentation>
+
+</PropertyList>
+

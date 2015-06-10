@@ -1,0 +1,570 @@
+<!-- A wrapper file for the TF-104G 3D model -->
+
+<PropertyList>
+
+ <path>tf104g.ac</path>
+
+
+<!-- ******************** instruments *******************-->
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/AI/AI.xml</path>
+  <offsets>
+   <x-m>-6.64</x-m>
+   <y-m> 0</y-m>
+   <z-m>0.52</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/RDMI/RDMI.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m> 0</y-m>
+   <z-m>0.415</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/n2/n2.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>0.17</y-m>
+   <z-m>0.45</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/FuelFlow/ff.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>0.23</y-m>
+   <z-m>0.45</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/EGT/EGT.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>0.17</y-m>
+   <z-m>0.39</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/AS/800/airspeed.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>-0.09</y-m>
+   <z-m>0.517</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Alt/version2/altimeter.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>0.09</y-m>
+   <z-m>0.517</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/IVSI/IVSI.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m> 0.08</y-m>
+   <z-m> 0.44</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Flaps/flaps.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>-0.26</y-m>
+   <z-m> 0.415</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Gear/gear.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>-0.19</y-m>
+   <z-m> 0.415</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/PanelLights/lights.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>-0.19</y-m>
+   <z-m>0.477</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Fuel/fuel-total-14.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>0.23</y-m>
+   <z-m>0.39</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Fuel/fuel-dump-switch.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>0.30</y-m>
+   <z-m>0.40</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Gunsight/gunsight.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>0</y-m>
+   <z-m>0.56</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/GMeter/gmeter.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>0.165</y-m>
+   <z-m>0.52</z-m>
+  </offsets>
+ </model>
+
+<!--
+ <model>
+  <path>Aircraft/DavePack/Instruments/radar/radar.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m> 0.0</y-m>
+   <z-m> 0.78</z-m>
+   <pitch-deg>-12.0</pitch-deg>
+  </offsets>
+ </model>
+-->
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/SAI/sai.xml</path>
+  <offsets>
+   <x-m>-6.63</x-m>
+   <y-m>-0.09</y-m>
+   <z-m> 0.44</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/MagCompass/comp.xml</path>
+  <offsets>
+   <x-m>-6.65</x-m>
+   <y-m>-0.12</y-m>
+   <z-m> 0.77</z-m>
+   <heading-deg>10.0</heading-deg>
+  </offsets>
+ </model>
+
+ <!-- Brake Chute -->
+ <model>
+   <path>Aircraft/DavePack/Stores/Chute/chute.xml</path>
+   <offsets>
+     <x-m>-9</x-m>
+     <y-m>0</y-m>
+     <z-m>1</z-m>
+     <pitch-deg>0</pitch-deg>
+   </offsets>
+ </model>
+
+ <!-- Engine Exhaust Heat Effects 
+ <model>
+   <path>Aircraft/DavePack/Effects/Exhaust/exhaust.xml</path>
+   <offsets>
+     <x-m>6.5</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+     <pitch-deg>0</pitch-deg>
+   </offsets>
+ </model>
+ -->
+
+ <!-- Engine Afterburner Plume -->
+ <model>
+   <path>Aircraft/DavePack/Effects/Afterburner/plume.xml</path>
+   <offsets>
+     <x-m>6.2</x-m>
+     <y-m>0</y-m>
+     <z-m>0.35</z-m>
+     <pitch-deg>-4</pitch-deg>
+   </offsets>
+ </model>
+
+ <!-- Wing-tip vortices -->
+ <!-- Left Wing --> 
+ <model>
+   <path>Aircraft/DavePack/Effects/Vortex/vortex.xml</path>
+   <offsets>
+     <x-m>2</x-m>
+     <y-m>-3.5</y-m>
+     <z-m>-0.5</z-m>
+     <pitch-deg>0</pitch-deg>
+   </offsets>
+ </model>
+ <!-- Right Wing --> 
+ <model>
+   <path>Aircraft/DavePack/Effects/Vortex/vortex.xml</path>
+   <offsets>
+     <x-m>2</x-m>
+     <y-m>3.5</y-m>
+     <z-m>-0.5</z-m>
+     <pitch-deg>0</pitch-deg>
+   </offsets>
+ </model>
+
+ <!-- Landing Gear and Doors -->
+
+ <animation>
+  <type>select</type>
+  <object-name>NoseGear</object-name>
+  <object-name>NoseTire</object-name>
+  <object-name>NGearDoorRight</object-name>
+  <object-name>NGearDoorLeft</object-name>
+  <object-name>LMainGear</object-name>
+  <object-name>LMainTire</object-name>
+  <object-name>LMainGearDoors</object-name>
+  <object-name>RMainGear</object-name>
+  <object-name>RMainTire</object-name>
+  <object-name>RMainGearDoors</object-name>
+  <condition>
+   <greater-than>
+    <property>/gear/gear[0]/position-norm</property>
+    <value>0.1</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NoseGear</object-name>
+  <object-name>NoseTire</object-name>
+  <property>/gear/gear/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>0.1</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-4.74</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.24</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NGearDoorLeft</object-name>
+  <property>/gear/gear/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>0.1</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-4.30</x-m>
+   <y-m>-0.21</y-m>
+   <z-m>-0.77</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NGearDoorRight</object-name>
+  <property>/gear/gear/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>0.1</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-4.30</x-m>
+   <y-m>0.21</y-m>
+   <z-m>-0.77</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LMainGearStrut</object-name>
+  <object-name>LMainGearDoor-upper</object-name>
+  <object-name>LMainGearDoor-lower</object-name>
+  <object-name>LTire</object-name>
+  <property>/gear/gear/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>80</dep></entry>
+    <entry><ind>0.1</ind><dep>80</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m> 0.74055</x-m>
+   <y-m>-2.7402</y-m>
+   <z-m> 0.30329</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0.4</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RMainGearStrut</object-name>
+  <object-name>RMainGearDoor-upper</object-name>
+  <object-name>RMainGearDoor-lower</object-name>
+  <object-name>RTire</object-name>
+  <property>/gear/gear/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>80</dep></entry>
+    <entry><ind>0.1</ind><dep>80</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m> 0.74055</x-m>
+   <y-m> 2.7402</y-m>
+   <z-m> 0.30329</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0.4</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <!-- Horizontal Stabilizer --> 
+ <animation>
+  <type>rotate</type>
+  <object-name>HStab</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>20</factor>
+  <center>
+   <x-m>6.19</x-m>
+   <y-m>0</y-m>
+   <z-m>2.67</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <!-- Rudder -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Rudder</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>15</factor>
+  <axis>
+     <x1-m>6.34</x1-m>
+     <y1-m>0</y1-m>
+     <z1-m>1.12</z1-m>
+     <x2-m>6.27</x2-m>
+     <y2-m>0</y2-m>
+     <z2-m>2.62</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Left Flap -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LFlap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-45.0</factor>
+  <axis>
+     <x1-m>1.58</x1-m>
+     <y1-m>-1.12</y1-m>
+     <z1-m>-0.04</z1-m>
+     <x2-m>1.55</x2-m>
+     <y2-m>-2.39</y2-m>
+     <z2-m>-0.27</z2-m>
+  </axis>
+ </animation>
+ 
+ <!-- Right Flap -->
+ <animation>
+  <type>rotate</type>
+  <object-name>RFlap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>45.0</factor>
+  <axis>
+     <x1-m>1.58</x1-m>
+     <y1-m>1.12</y1-m>
+     <z1-m>-0.04</z1-m>
+     <x2-m>1.55</x2-m>
+     <y2-m>2.39</y2-m>
+     <z2-m>-0.27</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Left Slat -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LSlat</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>20</factor>
+  <axis>
+     <x1-m>-0.531</x1-m>
+     <y1-m>-1.122</y1-m>
+     <z1-m>-0.036</z1-m>
+     <x2-m>0.4103</x2-m>
+     <y2-m>-3.554</y2-m>
+     <z2-m>-0.4725</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Right Slat -->
+ <animation>
+  <type>rotate</type>
+  <object-name>RSlat</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-20</factor>
+  <axis>
+     <x1-m>-0.534</x1-m>
+     <y1-m>1.12</y1-m>
+     <z1-m>-0.036</z1-m>
+     <x2-m>0.4102</x2-m>
+     <y2-m>3.556</y2-m>
+     <z2-m>-0.4726</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Left Aileron -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LAileron</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-15</factor>
+  <axis>
+     <x1-m>1.44</x1-m>
+     <y1-m>-2.41</y1-m>
+     <z1-m>-0.27</z1-m>
+     <x2-m>1.47</x2-m>
+     <y2-m>-3.46</y2-m>
+     <z2-m>-0.45</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Right Aileron -->
+ <animation>
+  <type>rotate</type>
+  <object-name>RAileron</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>-15</factor>
+  <axis>
+     <x1-m>1.44</x1-m>
+     <y1-m>2.41</y1-m>
+     <z1-m>-0.27</z1-m>
+     <x2-m>1.47</x2-m>
+     <y2-m>3.46</y2-m>
+     <z2-m>-0.45</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Left Speedbrake-->
+ <animation>
+  <type>rotate</type>
+  <object-name>speedbrake-left</object-name>
+  <object-name>speedbrake-left-inner</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>55</factor>
+  <center>
+     <x-m>3.10</x-m>
+     <y-m>-0.88</y-m>
+     <z-m>0.06</z-m>
+  </center>
+  <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>-1</z>
+  </axis>
+ </animation>
+
+ <!-- Right Speedbrake -->
+ <animation>
+  <type>rotate</type>
+  <object-name>speedbrake-right</object-name>
+  <object-name>speedbrake-right-inner</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>55</factor>
+  <center>
+     <x-m>3.10</x-m>
+     <y-m>0.88</y-m>
+     <z-m>0.06</z-m>
+  </center>
+  <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+  </axis>
+ </animation>
+
+ <!-- Hook-->
+ <animation>
+  <type>rotate</type>
+  <object-name>hook</object-name>
+  <property>gear/tailhook/position-norm</property>
+  <factor>-45</factor>
+  <center>
+     <x-m>2.83</x-m>
+     <y-m>0.08</y-m>
+     <z-m>-0.72</z-m>
+  </center>
+  <axis>
+     <x>0</x>
+     <y>-1</y>
+     <z>0</z>
+  </axis>
+ </animation>
+
+
+
+ <!-- Suppress Seat/Pilot Models in Cockpit View -->
+ <animation>
+  <type>select</type>
+  <object-name>PilotFwd</object-name>
+  <object-name>SeatFwd</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>/sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+
+</PropertyList>
+ 

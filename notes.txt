@@ -1,0 +1,14 @@
+Original Model by Massimo Taccoli.  Adapted for FlightGear by David Culp.
+This model is built for FlightGear version 2.2, but may work in other
+versions.  The "DavePack" set of instrument and effects models is required.
+
+The aircraft model is released under the license:  Creative Commons, CC-NC-BY-SA
+
+
+Version Info:  This is an 80% complete test version.
+
+David Culp
+davidculp@cox.net
+
+
+For good F-104 info, see:  http://www.airplanedriver.net/study/f104.htm
